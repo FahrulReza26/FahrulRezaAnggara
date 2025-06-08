@@ -1,72 +1,167 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toko Online Sederhana</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1>TokoOnline</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Produk</a></li>
-          <li><a href="#">Keranjang</a></li>
-          <li><a href="#">Kontak</a></li>
-        </ul>
-      </nav>
-      <div class="cart-icon">🛒</div>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FahrulReza Store - Toko Elektronik Online</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="#" class="logo">FahrulStore</a>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          ☰
+        </button>
+        <a href="#" class="cart-icon">
+          🛒
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+      <nav>
+        <div class="nav-container">
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#kategori">Kategori</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h2>Selamat Datang di Tokofahrul</h2>
-      <p>Temukan produk favoritmu di sini!</p>
-    </section>
+    <main>
+      <section id="beranda">
+        <section class="hero">
+          <h1>Selamat Datang di FahrulStore</h1>
+          <p>Temukan fashion dan elektronik terbaru dengan harga terjangkau</p>
+          <a href="#produk" class="cta-button">Belanja Sekarang</a>
+        </section>
+      </section>
 
-    <section class="products">
-      <h2>Produk Terbaru untuk Pria</h2>
-      <div class="product-grid">
-        <article class="product">
-          <h3>Jam Tangan Kulit ChronoMan</h3>
-          <p>Jam tangan analog elegan dengan strap kulit asli dan fitur chronograph. Cocok untuk gaya formal maupun kasual.</p>
-          <p class="price">Rp 1.250.000</p>
-        </article>
-        <article class="product">
-          <h3>Sepatu Sneakers UrbanWalk</h3>
-          <p>Sepatu pria model sneakers yang nyaman dipakai sehari-hari. Desain modern dan bahan breathable.</p>
-          <p class="price">Rp 699.000</p>
-        </article>
-        <article class="product">
-          <h3>Parfum Pria Strong Musk</h3>
-          <p>Parfum dengan aroma maskulin dan segar, tahan hingga 12 jam. Cocok untuk aktivitas sepanjang hari.</p>
-          <p class="price">Rp 325.000</p>
-        </article>
-      </div>
-    </section>
+      <section id="produk">
+        <h2>Produk Terbaru</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">⌚</div>
+            <div class="product-info">
+              <h3 class="product-name">Jam Tangan Kulit ChronoMan</h3>
+              <p class="product-description">
+                Jam tangan analog elegan dengan strap kulit asli dan fitur chronograph. Cocok untuk gaya formal maupun kasual.
+              </p>
+              <div class="product-price">Rp 1.125.000</div>
+              <button class="add-to-cart" onclick="addToCart()">
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
 
-    <section class="categories">
-      <h2>Kategori</h2>
-      <ul>
-        <li>Elektronik</li>
-        <li>Fashion Pria</li>
-        <li>Perawatan Pria</li>
-        <li>Olahraga</li>
-      </ul>
-    </section>
+          <article class="product-card">
+            <div class="product-image">👟</div>
+            <div class="product-info">
+              <h3 class="product-name">Sepatu Sneakers UrbanWalk</h3>
+              <p class="product-description">
+                Sepatu pria model sneakers yang nyaman dipakai sehari-hari. Desain modern dan bahan breathable.
+              </p>
+              <div class="product-price">Rp 699.000</div>
+              <button class="add-to-cart" onclick="addToCart()">
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
 
-    <section class="about">
-      <h2>Tentang Kami</h2>
-      <p>Kami adalah toko online terpercaya yang menyediakan berbagai produk berkualitas untuk pria modern.</p>
-    </section>
-  </main>
+          <article class="product-card">
+            <div class="product-image">🎒</div>
+            <div class="product-info">
+              <h3 class="product-name">Tas Polo Ralph Lauren</h3>
+              <p class="product-description">
+                Tas Polo Ralph Lauren menawarkan beragam gaya, mulai dari tas tangan klasik hingga tas punggung sporty. Ciri khasnya adalah logo Polo ikonik yang terlihat pada banyak model. Selain itu, tas ini dikenal karena kualitas bahan yang baik, desain yang elegan, dan fungsionalitas yang praktis. 
+              </p>
+              <div class="product-price">Rp 200.000</div>
+              <button class="add-to-cart" onclick="addToCart()">
+                Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
 
-  <footer>
-    <p>&copy; 2025 Tokofahrul.</p>
-  </footer>
-</body>
+      <section id="kategori">
+        <h2>Kategori produk</h2>
+        <div class="categories">
+          <div class="category-card">
+            <div class="category-icon">⌚</div>
+            <h3>Jam Tangan</h3>
+            <p>Jam Tangan kulit terbaru</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">👟</div>
+            <h3>Sepatu</h3>
+            <p>Desain modern dan bahan breathable</p>
+          </div>
+          <div class="category-card">
+            <div class="category-icon">🎒</div>
+            <h3>Tas Ransel</h3>
+            <p>Desain yang elegan dan fungsionalitas yang praktis</p>
+
+      <section id="tentang">
+        <h2>Tentang Kami</h2>
+        <div class="about-content">
+          <p>
+            FahrulStore adalah toko elektronik online terpercaya yang menyediakan
+            berbagai gadget dan perangkat teknologi terbaru dengan kualitas
+            terjamin.
+          </p>
+          <p>
+            Kami berkomitmen untuk memberikan pengalaman berbelanja yang mudah,
+            aman, dan memuaskan dengan layanan pelanggan terbaik dan jaminan
+            produk original.
+          </p>
+          <p>
+            Dengan pengalaman lebih dari 10 tahun di industri teknologi, kami
+            telah melayani ribuan pelanggan di seluruh Indonesia dengan kepuasan
+            mencapai 98%.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>FahrulStore</h3>
+          <p>
+            Toko fashion dan elektronik online terpercaya dengan produk berkualitas dan
+            pelayanan terbaik.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Tautan Cepat</h3>
+          <p><a href="#">Beranda</a></p>
+          <p><a href="#produk">Produk</a></p>
+          <p><a href="#kategori">Kategori</a></p>
+          <p><a href="#tentang">Tentang Kami</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Layanan</h3>
+          <p><a href="#">Bantuan</a></p>
+          <p><a href="#">Kebijakan Privasi</a></p>
+          <p><a href="#">Syarat & Ketentuan</a></p>
+          <p><a href="#">Pengembalian</a></p>
+        </div>
+        <div class="footer-section">
+          <section id="kontak">
+            <h3>Kontak</h3>
+            <p>Email: info@fahrulstore.com</p>
+            <p>Telepon: (021) 126-3879</p>
+            <p>WhatsApp: +62 881-0234-84438</p>
+          </section>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FahrulStore. Seluruh hak cipta dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
